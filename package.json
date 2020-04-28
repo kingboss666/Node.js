@@ -1,0 +1,25 @@
+{
+  "name": "node_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "node dist/http",
+    "restart": "rimraf dist && yarn build && yarn start",
+    "dev": "nodemon --exec yarn restart"
+  },
+  "author": "king",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "loadsh": "0.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "cors": "^2.8.5",
+    "rimraf": "^3.0.2"
+  }
+}
